@@ -2,9 +2,11 @@
 title: "Untitled"
 author: "Valentina"
 date: "05/06/2019"
-output: word_document
-
-
+output: 
+  word_document:
+    reference_docx: "C:/Users/Valentina/Documents/Gapminder_2/Template.docx"
+params:
+  country: "Singapore"
 ---
 
 # Top level title/section Title
@@ -92,7 +94,7 @@ message = true will show also the packages; so in the final version the packages
 R chunks allow us to customise ho the code etc are displayed in the final document
  
 ```{r filter, echo=FALSE, results=FALSE}
-Australia <- filter(gapminder, country == "Australia")
+Australia <- filter(gapminder, country == params$country)
 #aust_data
 #results=FALSE won't show the results i.e. the tibble
 ```
@@ -104,7 +106,7 @@ p1 <- ggplot(Australia, aes(x=year, y=pop))+
 
 p1
 
-p1+labs(title= "Australia population over years")
+p1+labs(title= params$country)
 
 ```
 
@@ -117,7 +119,7 @@ What if the number gets updated?
 length <- length(unique(gapminder$country))
 ```
 so it becomes
-we are working with Australia data only because `r length` is too many
+we are working with `r  params$country` data only because `r length` is too many
 
 the code needs to be small.
 if not possible then use a code chunk on its own
@@ -128,7 +130,7 @@ n_countries <- length(unique(gapminder$country))
 
 code won't be shown but run
 
-we are working with Australia data only because `r n_countries` is too many. 
+we are working with `r params$country` data only because `r n_countries` is too many. 
  
 ```{r}
 Rstudio <-  getRversion()
