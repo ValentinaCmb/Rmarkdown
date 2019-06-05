@@ -4,3 +4,65 @@ author: "Valentina"
 date: "05/06/2019"
 output: html_document
 ---
+
+# Top level title/section Title
+
+## Sub-section title 
+
+### Sub-sub-section
+
+#### Really not important
+
+Paragraph of something **text.** Highlight the word and press shift 8.
+_italics_
+**bold**
+Make a list with an * or a dash - to create a bullted list of points. Stay consistent with one sign.
+
+* Item 1
+* Item 2
+* Item 3
+
+To write a code think of slack
+use backticks ` code`and it gets marked-up
+
+For numbered lists, start with numbers
+
+1. Step 1
+2. Step 2
+3. Step 3
+
+if u use random numbers
+
+5. Step 1
+4. Step 2
+7. Step 3
+
+it still gives the right number order bc R recognises the number as such
+
+# Links
+
+here is a link to the [coursenotes](https://csiro-data-school.github.io/rmarkdown/02-Writing-Rmarkdown/index.html)
+
+## How to add images
+
+### Of funny cats for examples
+
+![Funny cat](http://images1.fanpop.com/images/image_uploads/Funny-Cat-Pictures-animal-humor-935491_500_375.jpg)
+
+**cats** are nice funny _animals_. Everyone should have
+
+* 1 cat
+* yummy food
+* a fireplace
+
+F^2^
+good to do some exercise [^1]. You can write the food note here next to the text. But it will appear at the end!
+
+[^1]: remember that speace and lines are quite important in RMarkdown
+ 
+# Getting files from your computer
+
+it depends on how the file path is written in windows. Use these forward slashes / not these \ for the file path. And add .png
+ 
+ !["image caption"](C:/Users/Valentina/Pictures/SLING.PNG)
+ 
